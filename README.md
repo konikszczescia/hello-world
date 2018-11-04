@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
   <link rel="stylesheet" href="styles1.css">
-  <h1> Religious kitsch</h1>
+    <div class="sign">
+	   <span class="sign__word">Religious</span>
+	   <span class="sign__word">kitsch</span>
+    </div>
+  </head>
 
-nav.nav
-  ul.nav__menu
-    li.nav__menu-item
-      a What is it?
-    li.nav__menu-item
-      a Where to find it?
-    li.nav__menu-item
-      a Gallery
-    li.nav__menu-item
-      a Give me more!
-    li.nav__menu-item
-      a About
-</head>
 <body>
+  <ul class='nav'>
+    <li><a href="#explanation">What is it?</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
 </body>
 </html>
