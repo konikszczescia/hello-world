@@ -8,4 +8,11 @@ text-align: center;
 }
  ul {
    display: inline-block;
+   font-family: 'Futura';
+   text-align: center;
+   list-style: none;
  }
+
+a {
+  color:white;
+}
