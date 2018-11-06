@@ -1,18 +1,37 @@
 
-h1{
-font-size: 60px;
-font-family: 'Futura';
-color: #fff;
-text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
-text-align: center;
+h1 {
+  font-size: 60px;
+  font-family: 'Futura';
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-align: center;
+}
+
+div.nav {
+  text-align: center;
 }
  ul {
    display: inline-block;
    font-family: 'Futura';
-   text-align: center;
-   list-style: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: none;
+   list-style-type: : none;
  }
 
+ li {
+   display: inline-block;
+ }
+    li a {
+      color: white;
+      text-align:center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+      li a:hover {
+        background-color: pink;
+      }
 a {
   color:white;
 }
