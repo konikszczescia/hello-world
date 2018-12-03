@@ -1,11 +1,14 @@
 
-h1 {
+header {
   font-size: 60px;
   font-family: 'Futura';
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
   text-align: center;
+  margin-top: 80px;
 }
+
+
 
 div.nav {
   text-align: center;
@@ -35,3 +38,112 @@ div.nav {
 a {
   color:white;
 }
+
+        .welcome {
+          width: 72ch;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 100px;
+        }
+
+        .art {
+          width: 72ch;
+          height: 30ch;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 100px;
+          background-image: url('images/MJ.jpg');
+
+
+        }
+
+        .summer {
+          width: 72ch;
+          height: 30ch;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 100px;
+          background-image: url('images/flamingos1.jpg');
+        }
+
+        .religious {
+          width: 72ch;
+          height: 30ch;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 100px;
+          background-image: url('images/lakshmi-devi.jpg');
+        }
+
+.art a {
+    font-size: 15px;
+    font-family: 'Futura';
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    background-color: none;
+    margin-bottom: 0;
+  }
+   .art a:hover {
+     color: #cc3399;
+   }
+
+   .art a:visited {
+     color: #58CAF3;
+   }
+
+  .art .subtitle {
+    font-size: 12px;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    margin-top: 0;
+  }
+  .summer a {
+      font-size: 15px;
+      font-family: 'Futura';
+      color: black;
+      text-align: left;
+      text-decoration: none;
+      background-color: none;
+      margin-bottom: 0;
+    }
+     .summer a:hover {
+       color: #cc3399;
+     }
+
+     .summer a:visited {
+       color: #58CAF3;
+     }
+
+    .summer .subtitle {
+      font-size: 12px;
+      color: black;
+      text-align: left;
+      text-decoration: none;
+      margin-top: 0;
+    }
+    .religious a {
+        font-size: 15px;
+        font-family: 'Futura';
+        color: black;
+        text-align: left;
+        text-decoration: none;
+        background-color: none;
+        margin-bottom: 0;
+      }
+       .religious a:hover {
+         color: #cc3399;
+       }
+
+       .religious a:visited {
+         color: #58CAF3;
+       }
+
+      .religious .subtitle {
+        font-size: 12px;
+        color: black;
+        text-align: left;
+        text-decoration: none;
+        margin-top: 0;
+      }

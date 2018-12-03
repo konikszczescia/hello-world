@@ -1,0 +1,2988 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a046830de0","agent":"","transactionName":"ZgdRbUMFCxAHURVaDl9NdUxfBxEKCVxOVwtQDFRWHwcKEQMcCVIPVQ5WS0JKEhABW1tkMnYre1hfAAkGFBw+bAJQDl9mbg==","applicationID":"21256025","errorBeacon":"bam.nr-data.net","applicationTime":4}</script>
+    
+    
+    
+    <meta property="og:url" content="https://www.tate.org.uk/art/artworks/koons-made-in-heaven-ar00080" />
+    
+    <meta property="og:site_name" content="Tate" />
+    <meta property="fb:app_id" content="402260676558591" />
+    <meta property="fb:admins" content="100003842463048" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tate" />
+    <meta name="twitter:creator" content="@tate" />
+    
+    <meta property="og:title" content="‘Made in Heaven’, Jeff Koons, 1989 | Tate " />
+    <meta name="twitter:title" content="‘Made in Heaven’, Jeff Koons, 1989 | Tate " />
+    
+    
+    <meta property="og:image" content="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/tate_social_logo.png" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/tate_social_logo.png" />
+    <meta property="og:image:width" content="840" />
+    <meta property="og:image:height" content="450" />
+    
+    
+    <meta name="description" content="Artwork page for ‘Made in Heaven’, Jeff Koons, 1989" />
+    <meta name="twitter:description" content="Artwork page for ‘Made in Heaven’, Jeff Koons, 1989" />
+    <meta property="og:description" content="Artwork page for ‘Made in Heaven’, Jeff Koons, 1989" />
+    
+    <meta name="author" content="Tate" />
+    <meta property="og:type" content="article" />
+    <meta property="article:section" content="Art & artists" />
+    <meta name="keywords" content="art, ‘Made in Heaven’, Jeff Koons, Lithograph on paper on canvas, Tate / National Galleries of Scotland collection, Tate, artwork" />
+    
+    
+    
+    
+
+    <title>‘Made in Heaven’, Jeff Koons, 1989 | Tate </title>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://www.tate.org.uk/favicon.ico"/>
+    
+    <link rel="canonical" href="https://www.tate.org.uk/art/artworks/koons-made-in-heaven-ar00080" />
+
+    
+    <link type="text/css" rel="stylesheet" href="https://storage.googleapis.com/tate-digital/ui/fonts-compressed.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/css/styles.min.css" media="all" />
+    
+
+
+
+
+<script type="text/javascript">
+    var TateUrls = {
+    	'root': 'https://www.tate.org.uk',
+    	'shop': 'https://shop.tate.org.uk',
+    	'tickets': 'https://shop.tate.org.uk'
+    };
+	var pageProperties = {
+		'theme': 'default',
+		'apiType': 'artwork',
+		'pageType': 'page--artwork',
+		'lang': 'en'
+	};
+    var dataLayer = window.dataLayer || [];
+    var objectData = {
+        'pageType': 'artwork',
+        'lang': 'en',
+        'section': 'art'
+        ,
+        'title': '‘Made in Heaven’, Jeff Koons, 1989'
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    };
+    
+    var relatedArtists = [];
+    
+    
+    relatedArtists.push('Jeff Koons');
+    relatedArtists.push('id:2368');
+    
+    objectData['relatedArtists'] = relatedArtists.join(' | ');
+    
+    
+    dataLayer.push(objectData);
+</script>
+
+
+
+<script>
+    var dataLayer = window.dataLayer || [];
+    var objectData = {
+        'relatedCollectionObjects': 'AR00080'
+    };
+    
+    
+    objectData['artworkMedium'] = 'Lithograph on paper on canvas';
+    
+    var giftGroups = [];
+    
+    giftGroups.push('ARTIST ROOMS');
+    
+    giftGroups.push('National Heritage Memorial Fund');
+    
+    giftGroups.push('Art Fund');
+    
+    objectData['giftGroups'] = giftGroups.join(' | ');
+    
+    objectData['pageCategory'] = 'on paper, unique';
+    dataLayer.push(objectData);
+</script>
+
+
+    
+
+</head>
+<body class="no-js page--artwork type--artwork lang--en">
+<!-- Google Tag Manager -->
+<script type="text/javascript">
+    dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'fireGtm': true
+    });
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WQPJ9H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WQPJ9H');</script>
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+(function(){
+    var cookies;
+
+    function tateReadCookie(name,c,C,i){
+        if(cookies){ return cookies[name]; }
+
+        c = document.cookie.split('; ');
+        cookies = {};
+
+        for(i=c.length-1; i>=0; i--){
+           C = c[i].split('=');
+           cookies[C[0]] = C[1];
+        }
+
+        return cookies[name];
+    }
+
+    function tatePopulateBasket() {
+        var basketItems = parseInt(tateReadCookie('sccBasket'));
+        var nav = document.querySelectorAll("div.header-nav")[0];
+        if(!isNaN(basketItems) && basketItems > 0 && typeof(nav) !== 'undefined') {
+            nav.classList.add('header-nav--has-basket');
+            var basket = document.createElement("div");
+            basket.classList.add('header-nav__item');
+            basket.classList.add('header-nav__basket');
+            basket.id = 'tate-basket';
+            basket.innerHTML = '<a href="https://shop.tate.org.uk/s/tate/basket" title="View Basket" class="btn  btn--type__no-bg btn--size__small btn--style__icon" data-gtm-name="Navigation-basket"><i class="btn__icon icon--shop"></i><span class="btn__badge">' + basketItems  + '</span></a>';
+            nav.insertBefore(basket, nav.firstChild);
+        }
+    }
+    window.tatePopulateBasket = tatePopulateBasket;
+})();
+
+</script>
+
+
+<div id="page">
+    
+    <header id="header" role="banner" itemscope="" itemtype="https://schema.org/WPHeader">
+        <div class="container">
+            <div class="container__inner">
+                <div class="header-branding">
+                    <div class="site-logo" itemscope="" itemtype="https://schema.org/Organization">
+                        <a href="/" id="logo" itemprop="url" title="Return to the Tate home page"><img typeof="foaf:Image" itemprop="logo" src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/tate-logo.png" alt="Tate"></a>
+                    </div>
+                    
+                </div>
+                
+                <div class="header-nav">
+                    <div class="header-nav__item header-nav__shop">
+                        <a href="https://shop.tate.org.uk" class="btn  btn--type__no-bg btn--size__small btn--style__text" data-gtm-name="Navigation-header">
+                            <i class="btn__icon icon--shop"></i>
+                            <span class="btn__text">Shop</span>
+                        </a>
+                    </div>
+                    
+                    <div class="header-nav__item header-nav__search">
+                        <form action="/search" method="GET" id="search-block-form" accept-charset="UTF-8" class="site-search"  autocomplete="off">
+                            <div class="site-search__inner">
+                                <noscript>
+                                    <div class="input-wrapper input-wrapper--btn-over">
+                                        <input type="text" title="Search Tate" class="" name="q" placeholder="Search">
+                                        <button type="submit" class="btn btn--style__icon" data-gtm-name="Navigation-search-search">
+                                            <i class="btn__icon icon--search"></i>
+                                            <span class="btn__text">Search</span>
+                                        </button>
+                                    </div>
+                                </noscript>
+                                <div class="tag-list">
+                                    <h3 class="tags-list__title tags-list__title--inline">Suggested terms:</h3>
+                                    <a href="/art/art-terms" class="tag" data-gtm-name="Navigation-search">Glossary</a>
+                                    <a href="/search?q=Tate+Papers" class="tag" data-gtm-name="Navigation-search">Tate Papers</a>
+                                    <a href="/search?q=Turner+Collection " class="tag" data-gtm-name="Navigation-search">Turner Collection</a>
+                                    <a href="/kids" class="tag" data-gtm-name="Navigation-search">Tate Kids</a>
+                                    <a href="/tate-collective" class="tag" data-gtm-name="Navigation-search">Tate Collective</a>
+                                    <a href="/artist-rooms" class="tag" data-gtm-name="Navigation-search">ARTIST ROOMS</a>
+                                    <a href="/art/art-terms/b/black-audio-film-collective" class="tag" data-gtm-name="Navigation-search">Black Audio Film Collective</a>
+                                    <a href="/whats-on?daterange=fromnow&event_type=late" class="tag" data-gtm-name="Navigation-search">Late at Tate</a>
+                                    <a href="/art/artists/jenny-holzer-1307" class="tag" data-gtm-name="Navigation-search">Jenny Holzer</a>
+                                    <a href="/visit/tate-st-ives/barbara-hepworth-museum-and-sculpture-garden" class="tag" data-gtm-name="Navigation-search">Barbara Hepworth Museum</a>
+                                    <a href="/art/artists/angelica-kauffman-303" class="tag" data-gtm-name="Navigation-search">Angelica Kauffman</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                
+                <div class="header-join">
+                    <a href="/join-support/tate-members" class="header-join--action" data-gtm-name="Navigation-header">
+                        <span class="btn__text">Become a Member</span>
+                        <i class="btn__icon icon--arrow-right"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    
+
+    <script type="text/javascript">if(typeof(window.tatePopulateBasket)!=='undefined')window.tatePopulateBasket();</script>
+
+    
+    <nav id="nav" class="nav--relaxed" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <div class="container">
+            <div class="container__inner">
+                <div class="block site-menu-block">
+                    <h2 class="block__title h-e">Main menu</h2>
+                    <ul class="site-menu site-menu--level-1">
+                        <li class="site-menu__item menu-mlid-24438 site-menu__item--first">
+                            <a href="/art" title="Art and Artists" class="active-trail active" data-gtm-nav="Art &amp; artists" data-gtm-name="Navigation-primary">Art &amp; artists</a>
+                        </li>
+                        <li class="site-menu__item menu-mlid-24439">
+                            <a href="/whats-on" title="Exhibitions &amp; Events" class="" data-gtm-nav="Exhibitions &amp; Events" data-gtm-name="Navigation-primary">Exhibitions &amp; events</a>
+                        </li>
+                        <li class="site-menu__item menu-mlid-24440 site-menu__item--last">
+                            <a href="/visit" title="Plan your visit at Tate" class="" data-gtm-nav="Plan your visit" data-gtm-name="Navigation-primary">Plan your visit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block site-menu-block">
+                    <h2 class="block__title h-e">Main menu additional</h2>
+                    <ul class="site-menu--handheld site-menu--handheld--level-1">
+                        <li class="site-menu--handheld__item menu-mlid-24492 site-menu--handheld__item--first">
+                            <a href="/join-support/tate-members" title="Become a Tate Member" class="" data-gtm-nav="Become a member" data-gtm-name="Navigation-primary">Become a Member</a>
+                        </li>
+                        <li class="site-menu--handheld__item menu-mlid-24491 site-menu--handheld__item--last">
+                            <a href="https://shop.tate.org.uk" title="Tate's online shop" class="" data-gtm-nav="Shop" data-gtm-name="Navigation-primary">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+
+
+<nav id="breadcrumb">
+    <div class="container breadcrumb__container">
+        <div class="container__inner">
+            <span class="breadcrumb__handle btn btn--type__no-bg btn--style__icon">
+                <i class="btn__icon icon--chevron-down"></i>
+                <span class="btn__text">Expand</span>
+            </span>
+            <div class="breadcrumb__list-outer">
+                <ul class="breadcrumb__list">
+                    
+                    <li class="breadcrumb__item"><a data-gtm-name="nav_link_breadcrumb" data-gtm-destination="landing-page" href="/art" title="Back to Art &amp; artists">Art &amp; artists</a></li>
+                    
+                    <li class="breadcrumb__item"><a href="/art/artists/jeff-koons-2368" data-gtm-name="nav_link_breadcrumb" data-gtm-destination="page--artist">Jeff Koons</a></li>
+                    
+                    <li class="breadcrumb__item"><span>Made in Heaven</span></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    
+
+    <div id="content" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/WebPage" class="container-16 ">
+        
+<article class="artwork">
+    <section class="content-main">
+        <div class="container container--primary-content">
+            <div class="content__body-text" itemprop="mainContentOfPage">
+                <header class="article-header">
+                    <div class="container__inner">
+                        <h2><a href="/art/artists/jeff-koons-2368" data-gtm-name="header_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></h2>
+                        <h1 class="beta">Made in Heaven</h1>
+                        <h2 class="header__date"><span>1989</span></h2>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="image-canvas image-canvas--artwork">
+            <figure>
+                <div class="image-container responsive-container">
+                    <div class="slider slider-for">
+                        <div>
+                        
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1536px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/45.1823; --aspect-ratio-percentage: 45.1823%; ">
+
+<img alt=""  data-src-128-58="https://www.tate.org.uk/art/images/work/AR/AR00080_7.jpg" data-src-256-116="https://www.tate.org.uk/art/images/work/AR/AR00080_8.jpg" data-src-730-330="https://www.tate.org.uk/art/images/work/AR/AR00080_9.jpg" data-src-1536-694="https://www.tate.org.uk/art/images/work/AR/AR00080_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00080_7.jpg" data-current-size="128-58"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00080_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+<div class="container image-strip artwork-meta">
+    <div class="container__inner">
+        <div class="grid-outer grid-outer--trigger-tablet">
+
+            <ul class="artwork-meta__buttons image-strip__buttons list list--inline list--icons list--icons-with-margin">
+                <li class="list__item list__item--icon list__item--icon-large">
+                    <div class="image-strip__share-rollover">
+                        <ul class="list list--social list--social--blue" style="">
+                            <li class="rollover-close list__item--first list__item--icon list__item--icon-large">
+                                <a href="#3" class="btn--type__inverse" title="Share">
+                                    <i class="icon icon--share"></i>
+                                    <span class="btn__text">Share</span>
+                                </a>
+                            </li>
+                            <li class="list__item list__item--icon list__item--twitter list__item--icon-large">
+                                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.tate.org.uk%2Fart%2Fartworks%2Fkoons-made-in-heaven-ar00080" target="_blank" title="Twitter" data-gtm-name="AAIcon-Share">Twitter</a>
+                            </li>
+                            <li class="list__item list__item--icon list__item--facebook list__item--icon-large">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tate.org.uk%2Fart%2Fartworks%2Fkoons-made-in-heaven-ar00080" target="_blank" title="Facebook" data-gtm-name="AAIcon-Share">Facebook</a>
+                            </li>
+                            <li class="list__item list__item--icon list__item--email list__item--icon-large">
+                                <a href="mailto:?subject=I%20have%20shared%20this%20page%20from%20the%20Tate%20website%20with%20you&amp;body=Look%20at%20this%20link%20from%20Tate%20https%3A%2F%2Fwww.tate.org.uk%2Fart%2Fartworks%2Fkoons-made-in-heaven-ar00080" target="_blank" title="Email" data-gtm-name="AAIcon-Share">Email</a>
+                            </li>
+                            <li class="list__item list__item--icon list__item--pinterest list__item--icon-large list__item--social-blue">
+                                <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.tate.org.uk%2Fart%2Fartworks%2Fkoons-made-in-heaven-ar00080&media=https%3A%2F%2Fstorage.googleapis.com%2Ftate-digital%2Fui%2F2.13-compressed%2Ftate_social_logo.png&description=Artwork%20page%20for%20%E2%80%98Made%20in%20Heaven%E2%80%99%2C%20Jeff%20Koons%2C%201989" target="_blank" title="Pinterest" data-gtm-name="AAIcon-Share" data-pin-custom="true">Pinterest</a>
+                            </li>
+                        </ul>
+                        <h4 class="list__title block__title">Share this page</h4>
+                    </div>
+                    <a href="#3" class="btn--type__inverse rollover-button" title="Share">
+                        <i class="icon icon--share"></i>
+                        <span class="btn__text">Share</span>
+                    </a>
+                </li>
+                <li class="list__item list__item--icon list__item--icon-large">
+                    <a id="master-image-album" href="#" data-anon-href="https://www.tate.org.uk/user?destination=art/artworks/koons-made-in-heaven-ar00080" data-ajax-type="modal" data-ajax-url="/art/albums/add/artwork/AR00080" class="btn--type__inverse" data-gtm-name="AAIcon-AddToAlbum" title="Add to album">
+                        <i class="icon icon--add"></i>
+                        <span class="btn__text">Add to album</span>
+                    </a>
+                </li>
+                <li class="list__item list__item--icon list__item--icon-large">
+                    <a href="https://shop.tate.org.uk/shop/prints/icat/prints" class="btn--type__inverse" data-gtm-name="AAIcon-Shop" title="Shop">
+                        <i class="icon icon--shop"></i>
+                        <span class="btn__text">Shop</span>
+                    </a>
+                </li>
+                
+                    
+                    <li class="list__item list__item--icon list__item--icon-large">
+                        <a class="btn--type__inverse lightbox-open" data-gtm-name="AAIcon-Enlarge" title="Full screen">
+                            <i class="icon icon--enlarge"></i>
+                            <span class="btn__text">Full screen</span>
+                        </a>
+                    </li>
+                    
+                
+            </ul>
+
+            
+            <figcaption class="artwork-meta__credit image-strip__caption grid-col--60 image-caption--no-hover">
+                
+                
+                <p><a id="master-image-copyright" href="/about-us/policies-and-procedures/website-terms-use">© Jeff Koons</a></p>
+                
+                
+                
+                <p><a id="master-image-licence" href="https://www.tate-images.com/results.asp?image=AR00080" class="image-licence">License this image</a></p>
+                
+            </figcaption>
+            
+        </div>
+    </div>
+</div>
+
+            </figure>
+        </div>
+    </section>
+
+    <!-- BANNER END HERE -->
+
+    <section class="container">
+        <div class="container__inner">
+            <div class="artwork__info content-truncate-container ">
+
+                    <div class="content-block--details content-block__right">
+                        
+                            <div class="card-list card-list--1col">
+                            
+                                <div class="card">
+                                
+                                
+
+
+
+<div class="card__inner">
+  
+  
+    <div class="card-header">
+      
+      <span class="card__label card__label--type">Not on display</span>
+      
+    </div>
+  
+  
+  
+</div>
+
+                                
+                                </div>
+                            
+                            </div>
+                        
+
+                        <div class="tombstone__outer">
+                            <dl class="tombstone">
+                                
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Artist</dt><dd class="tombstone__content">
+                                    
+                                    <a href="/art/artists/jeff-koons-2368" data-gtm-name="tombstone_link_artist" data-gtm-destination="page--artist">Jeff Koons</a> born 1955
+                                    </dd>
+                                </div>
+                                
+                                
+                                
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Medium</dt><dd class="tombstone__content">Lithograph on paper on canvas</dd>
+                                </div>
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Dimensions</dt><dd class="tombstone__content">Support: 3145 x 6910 x 5.5 mm</dd>
+                                </div>
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Collection</dt><dd class="tombstone__content">Tate / <a class="textlink" href="https://www.nationalgalleries.org/" data-gtm-name="tombstone_link_owner" data-gtm-destination="external">National Galleries of Scotland</a></dd>
+                                </div>
+                                
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Acquisition</dt><dd class="tombstone__content"><a href="/search?gid=999999788" data-gtm-name="tombstone_link_bequest" data-gtm-destination="list-page--search-results">ARTIST ROOMS</a>
+Acquired jointly with the National Galleries of Scotland through The d'Offay Donation with assistance from the <a href="/search?gid=999999967" data-gtm-name="tombstone_link_bequest" data-gtm-destination="list-page--search-results">National Heritage Memorial Fund</a> and the <a href="/search?gid=999999968" data-gtm-name="tombstone_link_bequest" data-gtm-destination="list-page--search-results">Art Fund</a> 2008</dd>
+                                </div>
+                                
+                                <div class="tombstone__row">
+                                    <dt class="tombstone__title">Reference</dt><dd class="tombstone__content">AR00080
+                                    
+                                    
+                                  
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+
+                
+                
+                <div class="artwork__text">
+                    <h3 class="inc__text-uppercase">Online caption</h3>
+                    
+                    <p>This billboard poster is part of a project in which Koons made works depicting his sexual relationship with his wife, the Italian porn-star Ilona Staller, also known as Cicciolina. These provocative works show the naked couple in explicit poses and reference paintings by artists such as Edouard Manet to examine the place of sexuality in visual culture. Koons employed Ilona’s regular photographer and backdrops, to create the distinctive aesthetic associated with 'glamour' imagery. Blurring the boundaries between fine art and pornography, Koons challenged the conventions of artistic taste, encouraging his audience to make their own decisions about what is acceptable.</p>
+                    
+                    
+                    
+                    <p class="text__read-more" style="display: none;">
+                    <a class="btn" href="#" data-gtm-name="body_link_read-more">
+                        <span class="btn__text">Read more</span>
+                    </a>
+                    </p>
+                    
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </section>
+
+    
+        
+    <div class="container article-strip" id="features">
+        <div class="container__inner article-strip__content">
+        
+            
+            
+
+    <h2 class="section__title">Features</h2>
+    <div class="card-group" data-strip-label="features" >
+        
+        <div class="card-list card-list--type__landscape card-list--1col card-list--100">
+        
+            
+            
+            
+            <div class="card card--tateetcarticle" >
+            
+
+
+
+<div class="card__inner">
+  
+    
+  
+  
+  
+    <div class="card-content ">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+                
+                  <a href="/context-comment/articles/lives-artists" data-gtm-name="card_link_title" data-gtm-destination="article-page--tate-etc">
+                      <span class="card__title--maintitle card__title--tate-etc">Lives of the artists</span>
+                  </a>
+                
+            </h3>
+
+            
+                <p class="article-header__author">
+                    
+                        
+                        Alison M. Gingeras
+                    
+                </p>
+            
+
+            
+
+            
+                
+                    
+                
+                
+                    <div class="card__description"><p>Flamboyant. Extravagant. Megalomanic. Alcoholic. Sexually obsessed. Manic-depressive. How important is persona in understanding an artist’s practice? By Alison Gingeras</p></div>
+                
+                
+                
+                
+          
+        </div>
+    </div>
+  
+  
+</div>
+
+            </div>
+            
+            
+            
+        
+        </div>
+        
+    </div>
+
+
+            
+        
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="container__inner">
+        
+            
+            
+
+<h2 class="section__title">Explore</h2>
+<div class="list-wrapper content-block--columns">
+    <ul class="list">
+        
+        <li class="list__item"><a href="/search?st=78" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>objects</strong></a><span class="count">(23,037)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=88" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">clothing and personal effects</a><span class="count">(5,836)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=3122" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">underwear</a><span class="count">(69)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=174" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">reading, writing, printed matter</a><span class="count">(5,035)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=4896" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">poster</a><span class="count">(862)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+        <li class="list__item"><a href="/search?st=91" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>people</strong></a><span class="count">(35,246)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=92" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">actions: postures and motions</a><span class="count">(9,053)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=723" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">lying down</a><span class="count">(366)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=95" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">adults</a><span class="count">(22,958)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=195" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">man</a><span class="count">(10,596)</span></li>
+                    
+                        <li class="list__item"><a href="/search?st=167" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">woman</a><span class="count">(9,099)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=98" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">nudes</a><span class="count">(2,534)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=480" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">male</a><span class="count">(960)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=102" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">named individuals</a><span class="count">(12,434)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=17766" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">Koons, Jeff</a><span class="count">(7)</span></li>
+                    
+                        <li class="list__item"><a href="/search?st=17767" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">Staller, Illona, ‘La Cicciolina’</a><span class="count">(2)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=177" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">actions: expressive</a><span class="count">(2,617)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=544" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">embracing</a><span class="count">(427)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=20114" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">portraits</a><span class="count">(4,342)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=20117" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">individuals: female</a><span class="count">(1,659)</span></li>
+                    
+                        <li class="list__item"><a href="/search?st=20116" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">self-portraits</a><span class="count">(752)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+        <li class="list__item"><a href="/search?st=116" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>work and occupations</strong></a><span class="count">(14,300)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=118" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">arts and entertainment</a><span class="count">(6,576)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=1662" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">actor</a><span class="count">(265)</span></li>
+                    
+                        <li class="list__item"><a href="/search?st=13610" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">artist, multi-media</a><span class="count">(408)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+        <li class="list__item"><a href="/search?st=145" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>society</strong></a><span class="count">(34,890)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=153" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">dress: fantasy/fancy</a><span class="count">(396)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=4209" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">erotic</a><span class="count">(80)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=157" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">sex and relationships</a><span class="count">(5,273)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=3050" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">sex</a><span class="count">(550)</span></li>
+                    
+                    </ul>
+                </li>
+            
+                <li class="list__item"><a href="/search?st=6927" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">lifestyle and culture</a><span class="count">(10,171)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=6928" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">advertising</a><span class="count">(497)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+        <li class="list__item"><a href="/search?st=162" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>symbols &amp; personifications</strong></a><span class="count">(7,227)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=166" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">inscriptions</a><span class="count">(6,737)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=9326" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">printed text</a><span class="count">(1,141)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+        <li class="list__item"><a href="/search?st=29" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results"><strong>emotions, concepts and ideas</strong></a><span class="count">(15,766)</span>
+            <ul class="list__level-2">
+            
+                <li class="list__item"><a href="/search?st=6729" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">formal qualities</a><span class="count">(11,825)</span>
+                    <ul class="list__level-3">
+                    
+                        <li class="list__item"><a href="/search?st=9328" data-gtm-name="body_tag_subject" data-gtm-destination="list-page--search-results">photographic</a><span class="count">(4,243)</span></li>
+                    
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        
+        </div>
+    </div>
+    
+    <div class="container article-strip" id="you-might-like">
+        <div class="container__inner article-strip__content">
+        
+            
+            
+
+    <h2 class="section__title">You might like</h2>
+    <div class="card-group card--carousel" data-strip-label="you-might-like" >
+        
+            <div class="carousel__button-group">
+                <button class="carousel--left btn btn--style__icon" data-gtm-name="Carousel-left">
+                    <i class="btn__icon icon--arrow-left"></i>
+                    <span class="btn__text">Left</span>
+                </button>
+                <button class="carousel--right btn btn--style__icon" data-gtm-name="Carousel-right">
+                    <i class="btn__icon icon--arrow-right"></i>
+                    <span class="btn__text">Right</span>
+                </button>
+            </div>
+        
+        <div class="card-list card-list--type__portrait card-list--4col card-list--100">
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-art-magazine-ads-art-in-america-ar00081" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1263px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/121.6152; --aspect-ratio-percentage: 121.6152%; ">
+
+<img alt="Jeff Koons, ‘Art Magazine Ads (Art in America)’ 1988–9"  data-src-105-128="https://www.tate.org.uk/art/images/work/AR/AR00081_7.jpg" data-src-210-256="https://www.tate.org.uk/art/images/work/AR/AR00081_8.jpg" data-src-600-730="https://www.tate.org.uk/art/images/work/AR/AR00081_9.jpg" data-src-1263-1536="https://www.tate.org.uk/art/images/work/AR/AR00081_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00081_7.jpg" data-current-size="105-128"
+ data-visible="" data-caption="Jeff Koons, ‘Art Magazine Ads (Art in America)’ 1988–9" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00081_7.jpg" alt="Jeff Koons, ‘Art Magazine Ads (Art in America)’ 1988–9" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-art-magazine-ads-art-in-america-ar00081" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Art Magazine Ads (Art in America)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1988–9</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00081</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-art-magazine-ads-arts-ar01129" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1271px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/120.8497; --aspect-ratio-percentage: 120.8497%; ">
+
+<img alt="Jeff Koons, ‘Art Magazine Ads (Arts)’ 1988–9"  data-src-105-128="https://www.tate.org.uk/art/images/work/AR/AR01129_7.jpg" data-src-211-256="https://www.tate.org.uk/art/images/work/AR/AR01129_8.jpg" data-src-604-730="https://www.tate.org.uk/art/images/work/AR/AR01129_9.jpg" data-src-1271-1536="https://www.tate.org.uk/art/images/work/AR/AR01129_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR01129_7.jpg" data-current-size="105-128"
+ data-visible="" data-caption="Jeff Koons, ‘Art Magazine Ads (Arts)’ 1988–9" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR01129_7.jpg" alt="Jeff Koons, ‘Art Magazine Ads (Arts)’ 1988–9" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-art-magazine-ads-arts-ar01129" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Art Magazine Ads (Arts)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1988–9</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR01129</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-art-magazine-ads-flash-art-ar01130" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1187px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/129.4019; --aspect-ratio-percentage: 129.4019%; ">
+
+<img alt="Jeff Koons, ‘Art Magazine Ads (Flash Art)’ 1988–9"  data-src-98-128="https://www.tate.org.uk/art/images/work/AR/AR01130_7.jpg" data-src-197-256="https://www.tate.org.uk/art/images/work/AR/AR01130_8.jpg" data-src-564-730="https://www.tate.org.uk/art/images/work/AR/AR01130_9.jpg" data-src-1187-1536="https://www.tate.org.uk/art/images/work/AR/AR01130_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR01130_7.jpg" data-current-size="98-128"
+ data-visible="" data-caption="Jeff Koons, ‘Art Magazine Ads (Flash Art)’ 1988–9" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR01130_7.jpg" alt="Jeff Koons, ‘Art Magazine Ads (Flash Art)’ 1988–9" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-art-magazine-ads-flash-art-ar01130" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Art Magazine Ads (Flash Art)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1988–9</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR01130</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-art-magazine-ads-art-forum-ar01131" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1520px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/101.0526; --aspect-ratio-percentage: 101.0526%; ">
+
+<img alt="Jeff Koons, ‘Art Magazine Ads (Art Forum)’ 1988–9"  data-src-126-128="https://www.tate.org.uk/art/images/work/AR/AR01131_7.jpg" data-src-253-256="https://www.tate.org.uk/art/images/work/AR/AR01131_8.jpg" data-src-722-730="https://www.tate.org.uk/art/images/work/AR/AR01131_9.jpg" data-src-1520-1536="https://www.tate.org.uk/art/images/work/AR/AR01131_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR01131_7.jpg" data-current-size="126-128"
+ data-visible="" data-caption="Jeff Koons, ‘Art Magazine Ads (Art Forum)’ 1988–9" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR01131_7.jpg" alt="Jeff Koons, ‘Art Magazine Ads (Art Forum)’ 1988–9" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-art-magazine-ads-art-forum-ar01131" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Art Magazine Ads (Art Forum)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1988–9</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR01131</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-bourgeois-bust-jeff-and-ilona-ar00597" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1127px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/136.291; --aspect-ratio-percentage: 136.291%; ">
+
+<img alt="Jeff Koons, ‘Bourgeois Bust - Jeff and Ilona’ 1991"  data-src-94-128="https://www.tate.org.uk/art/images/work/AR/AR00597_7.jpg" data-src-188-256="https://www.tate.org.uk/art/images/work/AR/AR00597_8.jpg" data-src-536-730="https://www.tate.org.uk/art/images/work/AR/AR00597_9.jpg" data-src-1127-1536="https://www.tate.org.uk/art/images/work/AR/AR00597_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00597_7.jpg" data-current-size="94-128"
+ data-visible="" data-caption="Jeff Koons, ‘Bourgeois Bust - Jeff and Ilona’ 1991" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00597_7.jpg" alt="Jeff Koons, ‘Bourgeois Bust - Jeff and Ilona’ 1991" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-bourgeois-bust-jeff-and-ilona-ar00597" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Bourgeois Bust - Jeff and Ilona</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1991</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00597</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-joe-dallesandro-and-sylvia-miles-in-heat-ar00372" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 173px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/147.9769; --aspect-ratio-percentage: 147.9769%; ">
+
+<img alt=""  data-src-86-128="https://www.tate.org.uk/art/images/work/AR/AR00372_7.jpg" data-src-173-256="https://www.tate.org.uk/art/images/work/AR/AR00372_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00372_7.jpg" data-current-size="86-128"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00372_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-joe-dallesandro-and-sylvia-miles-in-heat-ar00372" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Joe Dallesandro and Sylvia Miles in HEAT</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">date not known</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00372</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-jm-magazine-ar00337" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 193px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/132.6425; --aspect-ratio-percentage: 132.6425%; ">
+
+<img alt="Andy Warhol, ‘JM Magazine’ c.1985"  data-src-96-128="https://www.tate.org.uk/art/images/work/AR/AR00337_7.jpg" data-src-193-256="https://www.tate.org.uk/art/images/work/AR/AR00337_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00337_7.jpg" data-current-size="96-128"
+ data-visible="" data-caption="Andy Warhol, ‘JM Magazine’ c.1985" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00337_7.jpg" alt="Andy Warhol, ‘JM Magazine’ c.1985" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-jm-magazine-ar00337" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">JM Magazine</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">c.1985</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00337</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhols-flesh-ar00379" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 174px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/147.1264; --aspect-ratio-percentage: 147.1264%; ">
+
+<img alt=""  data-src-87-128="https://www.tate.org.uk/art/images/work/AR/AR00379_7.jpg" data-src-174-256="https://www.tate.org.uk/art/images/work/AR/AR00379_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00379_7.jpg" data-current-size="87-128"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00379_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhols-flesh-ar00379" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol’s FLESH</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">date not known</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00379</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhols-lonesome-cowboys-ar00332" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 181px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/141.4365; --aspect-ratio-percentage: 141.4365%; ">
+
+<img alt="Andy Warhol, ‘Andy Warhol’s Lonesome Cowboys’ 1978"  data-src-90-128="https://www.tate.org.uk/art/images/work/AR/AR00332_7.jpg" data-src-181-256="https://www.tate.org.uk/art/images/work/AR/AR00332_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00332_7.jpg" data-current-size="90-128"
+ data-visible="" data-caption="Andy Warhol, ‘Andy Warhol’s Lonesome Cowboys’ 1978" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00332_7.jpg" alt="Andy Warhol, ‘Andy Warhol’s Lonesome Cowboys’ 1978" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhols-lonesome-cowboys-ar00332" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol’s Lonesome Cowboys</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1978</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00332</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhols-ond-ar00426" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 179px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/143.0168; --aspect-ratio-percentage: 143.0168%; ">
+
+<img alt="Andy Warhol, ‘Andy Warhol’s OND’ 1977"  data-src-89-128="https://www.tate.org.uk/art/images/work/AR/AR00426_7.jpg" data-src-179-256="https://www.tate.org.uk/art/images/work/AR/AR00426_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00426_7.jpg" data-current-size="89-128"
+ data-visible="" data-caption="Andy Warhol, ‘Andy Warhol’s OND’ 1977" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00426_7.jpg" alt="Andy Warhol, ‘Andy Warhol’s OND’ 1977" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhols-ond-ar00426" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol’s OND</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1977</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00426</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhols-bad-ar00386" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 256px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/75.0; --aspect-ratio-percentage: 75.0%; ">
+
+<img alt=""  data-src-128-96="https://www.tate.org.uk/art/images/work/AR/AR00386_7.jpg" data-src-256-192="https://www.tate.org.uk/art/images/work/AR/AR00386_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00386_7.jpg" data-current-size="128-96"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00386_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhols-bad-ar00386" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol’s BAD</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">date not known</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00386</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-pony-blue-ar00492" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1143px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/134.3832; --aspect-ratio-percentage: 134.3832%; ">
+
+<img alt="Jeff Koons, ‘PONY (Blue)’ 1999"  data-src-95-128="https://www.tate.org.uk/art/images/work/AR/AR00492_7.jpg" data-src-191-256="https://www.tate.org.uk/art/images/work/AR/AR00492_8.jpg" data-src-543-730="https://www.tate.org.uk/art/images/work/AR/AR00492_9.jpg" data-src-1143-1536="https://www.tate.org.uk/art/images/work/AR/AR00492_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00492_7.jpg" data-current-size="95-128"
+ data-visible="" data-caption="Jeff Koons, ‘PONY (Blue)’ 1999" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00492_7.jpg" alt="Jeff Koons, ‘PONY (Blue)’ 1999" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-pony-blue-ar00492" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">PONY (Blue)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1999</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00492</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhol-presents-heat-ar00371" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 164px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/156.0976; --aspect-ratio-percentage: 156.0976%; ">
+
+<img alt=""  data-src-82-128="https://www.tate.org.uk/art/images/work/AR/AR00371_7.jpg" data-src-164-256="https://www.tate.org.uk/art/images/work/AR/AR00371_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00371_7.jpg" data-current-size="82-128"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00371_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhol-presents-heat-ar00371" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol presents: HEAT</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">date not known</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00371</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/warhol-andy-warhols-bad-ar00318" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 256px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/75.0; --aspect-ratio-percentage: 75.0%; ">
+
+<img alt=""  data-src-128-96="https://www.tate.org.uk/art/images/work/AR/AR00318_7.jpg" data-src-256-192="https://www.tate.org.uk/art/images/work/AR/AR00318_8.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00318_7.jpg" data-current-size="128-96"
+ data-visible="" data-caption="" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00318_7.jpg" alt="" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/andy-warhol-2121" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Andy Warhol</a></span>
+                
+                <a href="/art/artworks/warhol-andy-warhols-bad-ar00318" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">Andy Warhol’s BAD</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">date not known</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00318</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            <div class="card card--artwork" >
+            
+
+
+<div class="card__inner">
+    <div class="card-media card-media--image">
+        <div class="card-media__inner responsive-container">
+            <a href="/art/artworks/koons-goat-ice-blue-ar00486" data-gtm-name="card_link_image" data-gtm-destination="page--artwork">
+                
+                
+
+<div class="responsive-container__outer-sizer" style=" max-width: 1143px; margin: 0 auto;">
+<div class="responsive-container__sizer" 
+	style="--aspect-ratio: 100/134.3832; --aspect-ratio-percentage: 134.3832%; ">
+
+<img alt="Jeff Koons, ‘GOAT (Ice Blue)’ 1999"  data-src-95-128="https://www.tate.org.uk/art/images/work/AR/AR00486_7.jpg" data-src-191-256="https://www.tate.org.uk/art/images/work/AR/AR00486_8.jpg" data-src-543-730="https://www.tate.org.uk/art/images/work/AR/AR00486_9.jpg" data-src-1143-1536="https://www.tate.org.uk/art/images/work/AR/AR00486_10.jpg"
+ src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/images/placeholder/placeholder-4x3.gif"
+ data-original="https://www.tate.org.uk/art/images/work/AR/AR00486_7.jpg" data-current-size="95-128"
+ data-visible="" data-caption="Jeff Koons, ‘GOAT (Ice Blue)’ 1999" />
+<noscript><img src="https://www.tate.org.uk/art/images/work/AR/AR00486_7.jpg" alt="Jeff Koons, ‘GOAT (Ice Blue)’ 1999" /></noscript>
+</div></div>
+
+
+                
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="card-content">
+        <div class="card-content__inner">
+            <h3 class="card__title">
+            <!-- artwork or archive title starts here -->
+            
+                
+                    <span class="card__title--artwork-artist"><a href="/art/artists/jeff-koons-2368" data-gtm-name="card_link_artist" data-gtm-destination="page--artist">Jeff Koons</a></span>
+                
+                <a href="/art/artworks/koons-goat-ice-blue-ar00486" data-gtm-name="card_link_title" data-gtm-destination="page--artwork">
+                    <span class=" card__title--artwork">GOAT (Ice Blue)</span>
+                </a>
+            <!-- artist title starts here -->
+            
+            </h3>
+            
+            <div class="card__when">
+                <span class="card__when--artwork-date">1999</span>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <div class="card-footer">
+        
+        <span class="card__label card__label--acc-no">AR00486</span>
+    </div>
+    
+</div>
+
+            </div>
+            
+            
+            
+        
+        </div>
+        
+    </div>
+
+
+            
+        
+        </div>
+    </div>
+    
+
+    
+
+    
+    <script type="text/javascript">
+        var Slideshow = {"current": 0, "pagesize": 1, "slides": [{"copyright": "\u00a9 Jeff Koons", "title": "Made in Heaven", "pos": 0, "artists": "Jeff Koons", "images": {"730-330": "https://www.tate.org.uk/art/images/work/AR/AR00080_9.jpg", "1536-694": "https://www.tate.org.uk/art/images/work/AR/AR00080_10.jpg", "128-58": "https://www.tate.org.uk/art/images/work/AR/AR00080_7.jpg", "256-116": "https://www.tate.org.uk/art/images/work/AR/AR00080_8.jpg"}, "dateText": "1989", "thumbnail": "https://www.tate.org.uk/art/images/work/AR/AR00080_7.jpg"}], "total": 1, "type": "artwork", "page": 1};
+    </script>
+    
+</article>
+
+    </div>
+
+    <footer id="footer" role="contentinfo" itemscope="" itemtype="https://schema.org/WPFooter">
+        
+        <div class="container inc__bt--solid footer__primary">
+            <div class="container__inner">
+                <div class="grid-outer">
+                    <div class="grid-col--50 footer__follow-us">
+                        <div class="footer__social-links"><div class="list-wrapper"><h3 class="list__title block__title">Join in</h3><ul class="list list--inline list--social list--social--blue"><li class="list__item list__item--social list__item--twitter list__item--first"><a href="https://twitter.com/tate" title="Twitter" data-gtm-name="Social-footer">Twitter</a></li><li class="list__item list__item--social list__item--facebook"><a href="https://www.facebook.com/tategallery" title="Facebook" data-gtm-name="Social-footer">Facebook</a></li><li class="list__item list__item--social list__item--youtube"><a href="https://www.youtube.com/user/tate" title="Youtube" data-gtm-name="Social-footer">YouTube</a></li><li class="list__item list__item--social list__item--instagram"><a href="https://www.instagram.com/tate" title="Instagram" data-gtm-name="Social-footer">Instagram</a></li><li class="list__item list__item--social list__item--pinterest"><a href="https://pinterest.com/tategallery/" title="Pinterest" data-gtm-name="Social-footer">Pinterest</a></li><li class="list__item list__item--social list__item--tumblr list__item--last"><a href="http://tatecollective.tumblr.com/" title="Tumblr" data-gtm-name="Social-footer">Tumblr</a></li></ul></div></div>
+                        <div class="footer__newsletter">
+                            <form class="form__newsletter-signup" action="/subscribe/preferences" method="post">
+                                <div class="form-section form-section--multicolumn">
+                                    <div class="form-section__inner">
+                                        <div class="form-section__content">
+                                            <fieldset class="fieldset--button-inline fieldset--label-hidden">
+                                                <legend class="h-e">Stay in the know</legend>
+                                                <h3 class="fieldset-title">Stay in the know</h3>
+                                                <div class="form-item form-item--text">
+                                                    <label for="email">Newsletter</label>
+                                                    <input type="email" class="form-item__input form-item__input--text" name="email" placeholder="Email address"/>
+                                                </div>
+                                                <div class="form-item form-item--button">
+                                                    <button type="submit" class="btn btn--submit">
+                                                        <span class="btn__text">Sign Up</span>
+                                                    </button>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid-col--25 footer__quick-links footer__quick-links--about">
+                        <div class="list-wrapper">
+                            <h2 class="list__title block__title">About</h2>
+                            <ul class="list list--links">
+                                <li class="list__item"><a href="/about-us" data-gtm-name="Navigation-footer">About us</a></li>
+                                <li class="list__item"><a href="/about-us/collection" data-gtm-name="Navigation-footer">Our collection</a></li>
+                                <li class="list__item"><a href="/about-us/policies-and-procedures/website-terms-use" data-gtm-name="Navigation-footer">Terms and copyright</a></li>
+                                <li class="list__item"><a href="/about-us/governance" data-gtm-name="Navigation-footer">Governance</a></li>
+                                <li class="list__item"><a href="https://www.tate-images.com" data-gtm-name="Navigation-footer">Picture library</a></li>
+                                <li class="list__item"><a href="/artist-rooms" data-gtm-name="Navigation-footer">ARTIST ROOMS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-col--25 footer__quick-links footer__quick-links--support">
+                        <div class="list-wrapper">
+                            <h2 class="list__title block__title">Support</h2>
+                            <ul class="list list--links">
+                                <li class="list__item"><a href="/tate-collective" data-gtm-name="Navigation-footer">Tate Collective</a></li>
+                                <li class="list__item"><a href="/join-support/tate-members" data-gtm-name="Navigation-footer">Members</a></li>
+                                <li class="list__item"><a href="/join-support/tate-patrons" data-gtm-name="Navigation-footer">Patrons</a></li>
+                                <li class="list__item"><a href="/join-support/donate" data-gtm-name="Navigation-footer">Donate</a></li>
+                                <li class="list__item"><a href="/about-us/corporate-support" data-gtm-name="Navigation-footer">Corporate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container inc__bt--solid footer__secondary">
+            <div class="container__inner">
+                <div class="grid-outer grid-outer--trigger-tablet">
+                    <div class="grid-col--60">
+                        <div class="footer__logo">
+                            <span class="icon icon--logo footer-logo"></span>
+                        </div>
+                        <div class="footer__site-links">
+                            <div class="list-wrapper">
+                                <ul class="list list--links list--inline">
+                                    <li class="list__item"><a href="/press" data-gtm-name="Navigation-footer">Press</a></li>
+                                    <li class="list__item"><a href="/about-us/working-at-tate" data-gtm-name="Navigation-footer">Jobs</a></li>
+                                    <li class="list__item"><a href="/about-us/policies-and-procedures" data-gtm-name="Navigation-footer">Privacy and cookies</a></li>
+                                    <li class="list__item"><a href="/about-us/contact-us" data-gtm-name="Navigation-footer">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-col--40">
+                        <div class="content-block content-block--translation">
+                            <p><span class="inc__line-break">Browse in other languages:
+                        
+                        <a href="/de/besuch" data-gtm-name="Navigation-footer" data-gtm-destination="landing-page--visit">Deutsch</a>, 
+                        
+                        <a href="/es/visita" data-gtm-name="Navigation-footer" data-gtm-destination="landing-page--visit">Español</a>, 
+                        
+                        <a href="/fr/visite" data-gtm-name="Navigation-footer" data-gtm-destination="landing-page--visit">Français</a>, 
+                        
+                        <a href="/it/visita" data-gtm-name="Navigation-footer" data-gtm-destination="landing-page--visit">Italiano</a>
+                        </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+</div> <!-- end div.container -->
+
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/js/TateUI.min.js"></script>
+
+
+
+        
+<!-- SLIDESHOW START -->
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script type="text/javascript">
+// what actually builds the meaty part of a slide: the image, video, placeholder,..
+var buildSlide = function(slide, thumbnail, lightbox) {
+    if (typeof(thumbnail) === 'undefined')
+        thumbnail = false;
+
+    if (typeof(lightbox) === 'undefined')
+        lightbox = false;
+
+    var url = (typeof(slide.url) !== 'undefined') ? slide.url : null;
+    var artists = (typeof(slide.artists) !== 'undefined') ? slide.artists : null;
+    var title = (typeof(slide.title) !== 'undefined') ? slide.title : null;
+
+    var caption = (typeof(slide.caption) !== 'undefined') ? slide.caption : null;
+    var copyright = (typeof(slide.copyright) !== 'undefined') ? slide.copyright : null;
+    var cc = (typeof(slide.cc) !== 'undefined') ? slide.cc : null;
+    var acno = (typeof(slide.tate_images_acno) !== 'undefined') ? slide.tate_images_acno : null;
+    var year = (typeof(slide.dateText) !== 'undefined') ? slide.dateText : null;
+    var licence = (typeof(slide.tate_images_acno) !== 'undefined') ? slide.tate_images_acno : null;
+
+    var classes = [];
+
+    if (typeof(slide.insert) !== 'undefined' && slide.insert)
+        classes.push("insert");
+
+    // On archive pages set the artists, title and the year from the Slideshow object
+    if (lightbox && typeof(window.Slideshow.artists) !== 'undefined') {
+        var artists = window.Slideshow.artists;
+        var title = (typeof(window.Slideshow.title) !== 'undefined') ? window.Slideshow.title : null;
+        var year = (typeof(window.Slideshow.year) !== 'undefined') ? window.Slideshow.year : null;
+    }
+
+    thumb_classes = (classes.length > 0) ? ' class="' + classes.join(" ") + '"' : '';
+    if (thumbnail && typeof(slide.thumbnail) !== 'undefined') {
+        var img = "<img" + thumb_classes + " src='" + slide.thumbnail + "'";
+        if (url)
+            img += " data-url='" + url + "'";
+        img += ">";
+
+        return img;
+    }
+    else if (typeof(slide['images']) !== 'undefined' ) {
+        var attrs = [];
+
+        if (lightbox) {
+            classes.push("slick-lightbox-slick-img");
+        }
+        if (artists) {
+            attrs.push("data-artists='" + artists + "'");
+        }
+        if (title) {
+            attrs.push("data-title='" + title + "'");
+        }
+        if (year) {
+            attrs.push("data-year='" + year + "'");
+        }
+        if (url) {
+            attrs.push("data-url='" + url + "'");
+        }
+        if (caption) {
+            attrs.push('data-caption="' + caption + '"');
+        }
+        if (copyright) {
+            attrs.push("data-copyright='" + copyright + "'");
+        }
+        if (cc) {
+            attrs.push("data-cc='" + cc + "'");
+        }
+        if (acno) {
+            attrs.push("data-acno='" + acno + "'");
+        }
+        if (licence) {
+            attrs.push("data-licence='" + licence + "'");
+        }
+        if (classes.length > 0) {
+        	attrs.push("class='" + classes.join(" ") + "'");
+        }
+        
+        // the correct image size will be picked up by TateUI.LazyLoad()
+        Object.keys(slide["images"]).forEach(function(key,index) {
+            attrs.push("data-src-" + key + "='" + slide["images"][key] + "'");
+        });
+
+        var img = "<img " + attrs.join(" ") + " />";
+        if (!lightbox) {
+        	img = "<div class=\"slide master\">" + img + "</div>";
+        }
+        return img;
+    }
+    else if(typeof(slide['iframe_src']) !== 'undefined' ) {
+        min_height = '450';
+        if(thumbnail)
+            min_height = '150';
+        var iframe = '<iframe width="100%" height="auto" style="min-height:' + min_height + 'px;" src="' + slide['iframe_src']  + '" frameborder="0" allowfullscreen=""></iframe>';
+        return iframe;
+    }
+
+    // else e.g. HTML from soundcloud
+    return "<div class='no-image'></div>";
+};
+            
+// builds a single slide to be used on the main slideshow view: the wrapping HTML and the image/video/etc.
+var buildSlideshowSlide = function(slide) {
+    // custom method?
+    if(typeof(window.buildSlideshowSlideCustom) === 'function')
+        return window.buildSlideshowSlideCustom(slide);
+
+    return buildSlide(slide, false);
+};
+
+// builds a single slide to be used in the nav (ie. thumbnail carousel)
+var buildSlideshowNav = function(slide, lightbox) {
+    if(typeof(lightbox) === 'undefined')
+        lightbox = false;
+    if(typeof(window.buildSlideshowNavCustom) === 'function')
+        return window.buildSlideshowNavCustom(slide, lightbox);
+
+    return buildSlide(slide, true, lightbox);
+};
+
+var buildLightboxSlide = function(slide) {
+    if(typeof(window.buildLightboxSlideCustom) === 'function')
+        return window.buildLightboxSlideCustom(slide);
+
+    return '<div class="slick-lightbox-slick-item-inner">' + buildSlide(slide, false, true) + "</div>";
+};
+
+var addAjaxSlides = function(data) {
+    for(var i=0;i<data.slides.length;i++) {
+        updateSlide(data.slides[i]);
+    }
+    // update info about whether we need to load other pages via AJAX
+    if(typeof(data.prev_page) === 'undefined') {
+        window.Slideshow.prev_page = null;
+    }
+    else {
+        if(window.Slideshow.prev_page && window.Slideshow.prev_page > data.prev_page) {
+            window.Slideshow.prev_page = data.prev_page;
+            if(data.prev_page_url)
+                window.Slideshow.prev_page_url = data.prev_page_url;
+        }
+    }
+    if(typeof(data.prev_page_url) === 'undefined') {
+        window.Slideshow.prev_page_url = null;
+    }
+    // same for next_page
+    if(typeof(data.next_page) === 'undefined') {
+        window.Slideshow.next_page = null;
+    }
+    else {
+        if(window.Slideshow.next_page && window.Slideshow.next_page < data.next_page) {
+            window.Slideshow.next_page = data.next_page;
+            if(data.next_page_url)
+               window.Slideshow.next_page_url = data.next_page_url;
+        }
+    }
+    if(typeof(data.next_page_url) === 'undefined') {
+        window.Slideshow.next_page_url = null;
+    }
+    window.Slideshow.page = data.page;
+    $(window).trigger('resize.slickLightbox'); // tells the lightbox to adjust height/width of the image
+};
+
+// load previous/next page if needed/available
+var loadPreviousPage = function(currentSlide) {
+    var pagesize = window.Slideshow.pagesize;
+    var prev_page = typeof(window.Slideshow.prev_page !== 'undefined') ? window.Slideshow.prev_page : null;
+    // on which page the slide is (numbering of pages starts at 1)
+    var slide_page = Math.floor((currentSlide / pagesize) + 1);
+    // relative pos of the slide on its page
+    var relative_pos = currentSlide - ( pagesize * (slide_page - 1) );
+
+    if(prev_page && prev_page == slide_page - 1 && relative_pos < 10) {
+        var ajax_url = window.Slideshow.prev_page_url;
+        if(ajax_url) {
+            $.ajax({
+                'type': 'GET',
+                'url': ajax_url,
+            }).done(function(data) {
+                window.Slideshow.slides = data.slides.concat(window.Slideshow.slides);
+                addAjaxSlides(data);
+            })
+            .fail(function(xhr, text, error) {
+                console.log('AJAX failed: ' + text);
+            });
+        }
+    }
+};
+
+var loadNextPage = function(nextSlide) {
+    var pagesize = window.Slideshow.pagesize;
+    var next_page = typeof(window.Slideshow.next_page !== 'undefined') ? window.Slideshow.next_page : null;
+
+    // on which page the slide is (numbering pages from 1)
+    var slide_page = Math.floor((nextSlide / pagesize) + 1);
+    // relative pos of the slide on its page
+    var relative_pos = nextSlide - ( pagesize * (slide_page - 1) );
+
+    if(next_page && next_page == slide_page + 1 && Math.abs(pagesize - relative_pos) < 10) {
+        var ajax_url = window.Slideshow.next_page_url;
+        if(ajax_url) {
+            $.ajax({
+                'type': 'GET',
+                'url': ajax_url,
+            }).done(function(data) {
+                window.Slideshow.slides = window.Slideshow.slides.concat(data.slides);
+                addAjaxSlides(data);
+            })
+            .fail(function(xhr, text, error) {
+                console.log('AJAX failed: ' + text);
+            });
+        }
+    }
+}
+
+var setCaption = function () {
+    var caption = '';
+
+    if (window.Slideshow.type === 'archive') {
+        // Archive with one image
+        if (window.Slideshow.total === 1) {
+           caption = '<h1>' + $('.slick-lightbox .slider-for .slick-active img').data('title') + '</h1>';
+           caption += '<h2>' + $('.slick-lightbox .slider-for .slick-active img').data('year') + '</h2>';
+        }
+        // Sketchbooks
+        else if (window.Slideshow.total > 1) {
+           caption = '<h1>' + $('.slick-lightbox .slider-for .slick-active img').data('caption') + '</h1>';
+           caption += '<h2>From <em>' + $('.slick-lightbox .slider-for .slick-active img').data('title') + '</em>, ' +
+                   $('.slick-lightbox .slider-for .slick-active img').data('year') + '</h2>';
+        }
+    } else if (window.Slideshow.type === 'artwork') {
+        // Artworks
+        caption = '<h2>' + $('.slick-lightbox .slider-for .slick-active img').data('artists') + '</h2>';
+        caption += '<h1>' + $('.slick-lightbox .slider-for .slick-active img').data('title') + '</h1>';
+        caption += '<h2>' + $('.slick-lightbox .slider-for .slick-active img').data('year') + '</h2>';
+    } else if (window.Slideshow.type === 'album') {
+        caption = '<h1>' + $('.slick-lightbox .slider-for .slick-active img').data('caption') + '</h1>';
+        caption += '<h2>From <em>' + window.Slideshow.name + '</h2>';
+    }
+
+    $('.modal-footer-caption').html(caption);
+
+    return null;
+}
+
+// update HTML given a slide object (esp for objects received by an ajax call)
+var updateSlide = function(slide, lightbox_only, lightbox_nav, lightbox_main) {
+    if(typeof(lightbox_only) === 'undefined')
+        lightbox_only = false;
+    if(typeof(lightbox_nav) === 'undefined')
+        lightbox_nav = null;
+    if(typeof(lightbox_main) === 'undefined')
+        lightbox_main = null;
+    var slide_pos = slide.pos;
+    var nav_html;
+    if(lightbox_nav)
+        nav_html = buildSlideshowNav(slide, true);
+    else
+        nav_html = buildSlideshowNav(slide);
+    var is_insert = slide.insert ? true : false;
+    var side = slide.side ? slide.side : false;
+    if(!lightbox_only) {
+        $("#nav_placeholder_" + slide_pos).html(nav_html);
+        if(is_insert)
+            $("#nav_placeholder_" + slide_pos).addClass("insert");
+        if(side)
+            $("#nav_placeholder_" + slide_pos).addClass(side);
+    }
+    if(lightbox_nav) {
+        lightbox_nav.find("#lightbox_nav_placeholder_" + slide_pos).html(nav_html);
+        if(is_insert)
+            lightbox_nav.find("#lightbox_nav_placeholder_" + slide_pos).addClass("insert");
+        if(side)
+            lightbox_nav.find("#lightbox_nav_placeholder_" + slide_pos).addClass(side);
+    }
+    else {
+        $("#lightbox_nav_placeholder_" + slide_pos).html(nav_html);
+        if(is_insert)
+            $("#lightbox_nav_placeholder_" + slide_pos).addClass("insert");
+        if(side)
+            $("#lightbox_nav_placeholder_" + slide_pos).addClass(side);
+    }
+    if(!lightbox_only) {
+        var main_html = window.buildSlideshowSlide(slide);
+        $("#main_placeholder_" +slide_pos).html(main_html).tateResponsiveImage();
+    }
+    var lightbox_html = buildLightboxSlide(slide);
+    if(lightbox_main)
+        lightbox_main.find("#lightbox_main_placeholder_" + slide_pos).html(lightbox_html).tateResponsiveImage();
+    else
+        $("#lightbox_main_placeholder_" + slide_pos).html(lightbox_html).tateResponsiveImage();
+}
+
+// builds a slidehow
+var initSlideshow = function(nav_target, main_target, showItemCount, lightbox) {
+
+    if(typeof(showItemCount) === 'undefined')
+        showItemCount = true;
+    if(typeof(lightbox) === 'undefined')
+        lightbox = false;
+
+    if(!nav_target || !main_target)
+        return;
+
+    var slideshow = window.Slideshow;
+    if(typeof(window.Slideshow) === 'undefined' || typeof(window.Slideshow.slides) === 'undefined' ) {
+        // console.log("ERROR: no slideshow found");
+        return;
+    }
+    var arrows = '<div class="carousel__button-group slideshow-thumbs__button-group">'
+            + '<button class="carousel--left btn btn--style__icon" data-gtm-name="Carousel-related-artworks-left">'
+            + '<i class="btn__icon icon--arrow-left"></i>'
+            + '<span class="btn__text">Left</span>'
+            + '</button>'
+            + '<button class="carousel--right btn btn--style__icon" data-gtm-name="Carousel-related-artworks-right">'
+            + '<i class="btn__icon icon--arrow-right"></i>'
+            + '<span class="btn__text">Right</span>'
+            + '</button>'
+            + '</div>';
+
+    if (window.Slideshow.total > 1) {
+        var nav_container_id = "slideshow_nav_container";
+        var navClass = 'main-slider-nav';
+
+        if (lightbox) {
+            nav_container_id = "lightbox_" + nav_container_id;
+            navClass = 'modal-slider-nav';
+        }
+
+        var itemCount = '';
+        if (showItemCount) {
+            itemCount = '<p class="slideshow-thumbs__count"><span class="slick-current-page">1</span> of ' +
+                    window.Slideshow.total +
+                    '</p>';
+        }
+
+        var html = '<div class="' + navClass + '">' +
+                '<div class="container artwork-thumbnails image-strip slideshow-thumbs">' +
+                '<div class="container__inner">' +
+                '<div class="slideshow-thumbs__inner">' +
+                arrows +
+                '<ul class="slideshow-thumbs__list slider slider-nav" id="' + nav_container_id + '"></ul>' + itemCount +
+                '</div>' +
+                '</div></div></div>'
+
+        nav_target.append(html);
+
+        var nav = nav_target.find("#" + nav_container_id);
+    }
+
+    // element id's needed to replace placeholders with actual slides
+    var nav_id = "nav_placeholder_";
+    var main_id = "main_placeholder_";
+
+    if (lightbox) {
+        nav_id = "lightbox_" + nav_id;
+        main_id = "lightbox_" + main_id;
+    }
+
+    main_target.html('');
+
+    // create placeholders for each slide
+    for(var i=0;i<window.Slideshow.total;i++) {
+        if (window.Slideshow.total > 1) {
+            nav.append("<li class='slideshow-thumbs__item responsive-container' id='" + nav_id + i + "'></li>");
+        }
+
+        if(lightbox) {
+            var html = '<div class="archive-block-wrapper grid-outer slick-slide responsive-container">';
+            html += '<div class="slick-lightbox-slick-item" id="' + main_id + i + '"></div></div>';
+            main_target.append(html);
+        }
+        else
+            main_target.append("<div class='archive-block-wrapper grid-outer grid-outer--trigger-tablet slick-slide' id='" + main_id + i + "'></div>");
+    }
+
+    // add the initial slides
+    window.Slideshow.slides.forEach(function(slide) {
+        if(lightbox) {
+            updateSlide(slide, lightbox, nav_target, main_target);
+        } else {
+            updateSlide(slide);
+        }
+    });
+
+    // we may need to load prev_page or next_page straight-away
+    if(!lightbox && typeof(window.Slideshow.current) !== 'undefined') {
+        loadPreviousPage(window.Slideshow.current);
+        loadNextPage(window.Slideshow.current);
+    }
+};
+</script>
+
+<script type="text/javascript">
+    'use strict';
+    (function ($) {
+        var SlickLightbox, defaults;
+        SlickLightbox = function () {
+            function SlickLightbox(element, options) {
+                var slickLightbox;
+                this.options = options;
+                /* Binds the plugin. */
+                this.$element = $(element);
+                this.didInit = false;
+                slickLightbox = this;
+
+                this.$element.on('click.slickLightbox', function (e) {
+                    var $clickedItem, $items;
+                    e.preventDefault();
+                    $clickedItem = $(this);
+
+                    if (typeof slickLightbox.options.shouldOpen === 'function') {
+                        if (!slickLightbox.options.shouldOpen(slickLightbox, $clickedItem)) {
+                            return;
+                        }
+                    }
+                    $items = slickLightbox.filterOutSlickClones(slickLightbox.$element.find(slickLightbox.options.itemSelector));
+
+                    var initialSlide = 0;
+
+                    if ($('.slider-nav').length) {
+                        var initialSlide = $('.slider-nav').slick('slickCurrentSlide');
+                    }
+
+                    return slickLightbox.init(initialSlide);
+                });
+            }
+
+            SlickLightbox.prototype.init = function (index) {
+                /* Creates the lightbox, opens it, binds events and calls `slick`. Accepts `index` of the element, that triggered it (so that we know, on which slide to start slick). */
+                this.didInit = true;
+                this.detectIE();
+                this.createModal();
+                this.bindEvents();
+                this.initSlick(index);
+                return this.open();
+            };
+
+            SlickLightbox.prototype.createFooter = function () {
+                var controlButtons = '';
+
+                var html = '<div class="modal-footer artwork-meta image-strip">' +
+                        '<div class="grid-outer">' +
+
+                        '<ul class="grid-col--25 artwork-meta__buttons list list--inline list--icons modal-footer-control">' +
+                            controlButtons +
+                        '</ul>' +
+
+                        '<header class="artwork-meta__header grid-col--50 image-caption--no-hover modal-footer-caption" style=""></header>' +
+
+                        '<figcaption class="artwork-meta__credit grid-col--25 image-caption--no-hover" style="">' +
+                        '<p><span class="modal-footer-copyright"></span></p>' +
+                        '</figcaption>' +
+
+                        '</div>' +
+                        '</div>';
+
+                return html;
+            };
+
+            SlickLightbox.prototype.createModal = function () {
+                var html = '<div class="slick-lightbox slick-lightbox-hide-init' + (this.isIE ? ' slick-lightbox-ie' : '') + '" style="background: ' + this.options.background + ';">'
+                        + '<div class="slick-lightbox-inner">'
+                        + '<div class="slick-lightbox-slick slider-for">'
+                        + '</div>'
+                        + '<div class="lightbox-slideshow-navigation"></div>'
+                        + this.createFooter()
+                        + '</div></div>';
+
+                this.$modalElement = $(html);
+
+                initSlideshow(this.$modalElement.find(".lightbox-slideshow-navigation"), this.$modalElement.find(".slider-for"),false, true);
+
+                this.$parts = {};
+
+                this.$parts['closeButton'] = $(this.options.layouts.closeButton);
+                this.$modalElement.find('.modal-footer-control').append(this.$parts['closeButton']);
+
+                return $('body').append(this.$modalElement).tateResponsiveImage();
+            };
+
+            SlickLightbox.prototype.initSlick = function (index) {
+                /* Runs slick by default, using `options.slick` if provided. If `options.slick` is a function, it gets fired instead of us initializing slick. Merges in initialSlide option. */
+                var imgOptions, navOptions;
+
+                imgOptions = {
+                    arrows: false,
+                    asNavFor: '.slider-nav',
+                    caption: 'caption',
+                    captionPosition: 'bottom',
+                    fade: true,
+                    infinite: false,
+                    initialSlide: index,
+                    lazyLoad: 'ondemand',
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                };
+
+                navOptions = {
+                    arrows: false,
+                    asNavFor: '.slider-for',
+                    centerMode: true,
+                    fade: false,
+                    focusOnSelect: true,
+                    infinite: false,
+                    initialSlide: index,
+                    lazyLoad: 'ondemand',
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                };
+
+                if (this.options.slick != null) {
+                    if (typeof this.options.slick === 'function') {
+                        this.options.slick(this.$modalElement);
+                    } else {
+                        this.slick = this.$modalElement.find('.slider-for').slick($.extend({}, this.options.slick, imgOptions));
+                        this.slicknav = this.$modalElement.find('.slider-nav').slick(navOptions);
+
+                        $('.slider-nav').slick('slickGoTo', index);
+
+                        // Left / Right arrows
+                        $('.slick-lightbox .carousel--left').on('click', function(){
+                            $('.slider-for').slick('slickPrev');
+                            $('.slider-nav').slick('slickPrev');
+                        });
+                        $('.slick-lightbox .carousel--right').on('click', function(){
+                            $('.slider-for').slick('slickNext');
+                            $('.slider-nav').slick('slickNext');
+                        });
+
+                        // Set the current page
+                        $('.slick-current-page').html($('.slider-nav').slick('slickCurrentSlide') + 1);
+
+                        // Set copyright
+                        var copyright = $('#master-image-copyright').html();
+                        if(typeof copyright === 'undefined')
+                            copyright = '';
+                        $('.modal-footer-copyright').text(copyright);
+
+                        // Set caption
+                        setCaption();
+
+                        // Page number
+                        $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                            $('.slick-current-page').html(nextSlide + 1);
+                            var selector = "main_placeholder_" + nextSlide + " img";
+                            $("#lightbox_" + selector).tateLazyLoad({forceVisible: true});
+                            $("#" + selector).tateLazyLoad({forceVisible: true});
+                            $(".slider-for .piece-meta__list").addClass("h-e--mobile");
+                            $(".slider-for .piece-meta__trigger").text("Show details");
+                        });
+
+                        // Set Caption, Copyright after slide change
+                        $('.slider-for').on('afterChange', function(event, slick, currentSlide) {
+                            var copyright = $(slick.$slides.get(currentSlide)).find('img').attr('data-copyright');
+                            if(typeof copyright === 'undefined')
+                                copyright = '';
+                                
+                            $('.modal-footer-copyright').text(copyright);
+
+                            setCaption();
+                            $(window).trigger('resize.slickLightbox');
+                        });
+
+                        // Show / Hide nav slider
+                        $('.slick-lightbox-info').on('click', function() {
+                            $('.modal-slider-nav').css('position', 'relative');
+
+                            if ($('.modal-slider-nav').height()) {
+                                var anim = {
+                                    top: "+=90",
+                                    height: 0
+                                };
+                            } else {
+                                var anim = {
+                                    top: "-=90",
+                                    height: "90px"
+                                }
+                            }
+
+                            $('.modal-slider-nav').animate(anim, function() {
+                                if ($('.modal-slider-nav').height()) {
+                                    $('.slick-lightbox-control').show();
+                                } else {
+                                    $('.slick-lightbox-control').hide();
+                                }
+
+                                $(window).trigger('resize');
+                            });
+                        });
+
+                        // Autoplay controls
+                        $('.slick-lightbox-control > .icon--play').on('click', function() {
+                            $('.slider-for').slick('slickPlay');
+
+                            $('.slick-lightbox-control > .icon--play').fadeOut().hide();
+                            $('.slick-lightbox-control > .icon--stop').fadeIn();
+                        });
+
+                        $('.slick-lightbox-control > .icon--stop').on('click', function() {
+                            $('.slick-lightbox-control > .icon--stop').fadeOut().hide();
+                            $('.slick-lightbox-control > .icon--play').fadeIn();
+                            $('.slider-for').slick('slickPause');
+                        })
+                    }
+                }
+
+                return this.$modalElement.trigger('init.slickLightbox');
+            };
+
+            SlickLightbox.prototype.open = function () {
+                /* Opens the lightbox. */
+                if (this.options.useHistoryApi) {
+                    this.writeHistory();
+                }
+                this.$element.trigger('show.slickLightbox');
+                setTimeout(function (_this) {
+                    return function () {
+                        return _this.$element.trigger('shown.slickLightbox');
+                    };
+                }(this), this.getTransitionDuration());
+
+                return this.$modalElement.removeClass('slick-lightbox-hide-init');
+            };
+
+            SlickLightbox.prototype.close = function () {
+                /* Closes the lightbox and destroys it, maintaining the original element bindings. */
+                this.$element.trigger('hide.slickLightbox');
+                setTimeout(function (_this) {
+                    return function () {
+                        return _this.$element.trigger('hidden.slickLightbox');
+                    };
+                }(this), this.getTransitionDuration());
+                this.$modalElement.addClass('slick-lightbox-hide');
+                return this.destroy();
+            };
+
+            SlickLightbox.prototype.bindEvents = function () {
+                /* Binds global events. */
+                var resizeSlides;
+                resizeSlides = function (_this) {
+                    return function () {
+                        var h;
+                        h = _this.$modalElement.find('.slick-lightbox-inner').outerHeight();
+
+                        // nav strip
+                        var n = _this.$modalElement.find('.modal-slider-nav').outerHeight() ? _this.$modalElement.find('.modal-slider-nav').outerHeight() : 0;
+
+                        // footer
+                        var f = _this.$modalElement.find('.modal-footer').outerHeight() ? _this.$modalElement.find('.modal-footer').outerHeight() : 0;
+
+                        _this.$modalElement.find('.slick-lightbox-slick-item').height(h - n - f);
+
+                        return _this.$modalElement.find('.slick-lightbox-slick-img').css('max-height', Math.round(1 * (h - n - f)));
+                    };
+                }(this);
+
+                $(window).on('orientationchange.slickLightbox resize.slickLightbox', resizeSlides);
+
+                if (this.options.useHistoryApi) {
+                    $(window).on('popstate.slickLightbox', function (_this) {
+                        return function () {
+                            return _this.close();
+                        };
+                    }(this));
+                }
+
+                this.$modalElement.on('init.slickLightbox', resizeSlides);
+
+                this.$modalElement.on('destroy.slickLightbox', function (_this) {
+                    return function () {
+                        return _this.destroy();
+                    };
+                }(this));
+
+                this.$element.on('destroy.slickLightbox', function (_this) {
+                    return function () {
+                        return _this.destroy(true);
+                    };
+                }(this));
+
+                this.$parts['closeButton'].on('click.slickLightbox touchstart.slickLightbox', function (_this) {
+                    return function (e) {
+                        e.preventDefault();
+                        $('.slider-for').slick('slickPause');
+                        return _this.close();
+                    };
+                }(this));
+
+                if (this.options.closeOnEscape || this.options.navigateByKeyboard) {
+                    $(document).on('keydown.slickLightbox', function (_this) {
+                        return function (e) {
+                            var code;
+                            code = e.keyCode ? e.keyCode : e.which;
+                            if (_this.options.navigateByKeyboard) {
+                                if (code === 37) {
+                                    _this.slideSlick('left');
+                                } else if (code === 39) {
+                                    _this.slideSlick('right');
+                                }
+                            }
+                            if (_this.options.closeOnEscape) {
+                                if (code === 27) {
+                                    return _this.close();
+                                }
+                            }
+                        };
+                    }(this));
+                }
+
+                if (this.options.closeOnBackdropClick) {
+                    this.$modalElement.on('click.slickLightbox touchstart.slickLightbox', '.slick-lightbox-slick-img', function (e) {
+                        return e.stopPropagation();
+                    });
+                    return this.$modalElement.on('click.slickLightbox', '.slick-lightbox-slick-item', function (_this) {
+                        return function (e) {
+                            e.preventDefault();
+                            return _this.close();
+                        };
+                    }(this));
+                }
+            };
+
+            SlickLightbox.prototype.slideSlick = function (direction) {
+                /* Moves the slick prev or next. */
+                if (direction === 'left') {
+                    this.slicknav.slick('slickPrev');
+                    return this.slick.slick('slickPrev') ;
+                } else {
+                    this.slicknav.slick('slickNext');
+                    return this.slick.slick('slickNext');
+                }
+            };
+
+            SlickLightbox.prototype.detectIE = function () {
+                /* Detects usage of IE8 and lower. */
+                var ieversion;
+                this.isIE = false;
+                if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                    ieversion = new Number(RegExp.$1);
+                    if (ieversion < 9) {
+                        return this.isIE = true;
+                    }
+                }
+            };
+
+            SlickLightbox.prototype.unbindEvents = function () {
+                /* Unbinds global events. */
+                $(window).off('.slickLightbox');
+                $(document).off('.slickLightbox');
+                return this.$modalElement.off('.slickLightbox');
+            };
+
+            SlickLightbox.prototype.destroy = function (unbindAnchors) {
+                if (unbindAnchors == null) {
+                    unbindAnchors = false;
+                }
+                /* Destroys the lightbox and unbinds global events. If `true` is passed as an argument, unbinds the original element as well. */
+                if (this.didInit) {
+                    this.unbindEvents();
+                    setTimeout(function (_this) {
+                        return function () {
+                            return _this.$modalElement.remove();
+                        };
+                    }(this), this.options.destroyTimeout);
+                }
+                if (unbindAnchors) {
+                    this.$element.off('.slickLightbox');
+                    return this.$element.off('.slickLightbox', this.options.itemSelector);
+                }
+            };
+
+            SlickLightbox.prototype.destroyPrevious = function () {
+                /* Destroys lightboxes currently in DOM. */
+                return $('body').children('.slick-lightbox').trigger('destroy.slickLightbox');
+            };
+
+            SlickLightbox.prototype.getTransitionDuration = function () {
+                /* Detects the transition duration to know when to remove stuff from DOM etc. */
+                var duration;
+                if (this.transitionDuration) {
+                    return this.transitionDuration;
+                }
+                duration = this.$modalElement.css('transition-duration');
+                if (typeof duration === 'undefined') {
+                    return this.transitionDuration = 500;
+                } else {
+                    return this.transitionDuration = duration.indexOf('ms') > -1 ? parseFloat(duration) : parseFloat(duration) * 1000;
+                }
+            };
+
+            SlickLightbox.prototype.writeHistory = function () {
+                /* Writes an empty state to the history API if supported. */
+                return typeof history !== 'undefined' && history !== null ? typeof history.pushState === 'function' ? history.pushState(null, null, '') : void 0 : void 0;
+            };
+
+            SlickLightbox.prototype.filterOutSlickClones = function ($items) {
+                /* Removes all slick clones from the set of elements. Only does so, if the target element is a slick slider. */
+                if (!this.$element.hasClass('slick-slider')) {
+                    return $items;
+                }
+                return $items = $items.filter(function () {
+                    var $item;
+                    $item = $(this);
+                    return !$item.hasClass('slick-cloned') && $item.parents('.slick-cloned').length === 0;
+                });
+            };
+
+            return SlickLightbox;
+        }();
+
+        defaults = {
+            background: 'rgba(0,0,0,.9)',
+            closeOnEscape: true,
+            closeOnBackdropClick: false,
+            destroyTimeout: 500,
+            itemSelector: 'a',
+            navigateByKeyboard: true,
+            src: false,
+            caption: true,
+            captionPosition: 'dynamic',
+            images: false,
+            slick: {},
+            layouts: { closeButton: '<li class="list__item list__item--icon list__item--icon-large"><a href="#3" class="slick-lightbox-close btn--type__default" title="Exit full screen"><i class="icon icon--reduce"></i><span class="btn__text">Exit full screen</span></a></li>' },
+            useHistoryApi: true,
+            shouldOpen: null
+        };
+
+        $.fn.slickLightbox = function (options) {
+            /* Fires the plugin. */
+            options = $.extend({}, defaults, options);
+
+            $(this).each(function () {
+                return new SlickLightbox(this, options);
+            });
+            return this;
+        };
+
+        $.fn.unslickLightbox = function () {
+            /* Removes everything. */
+            return $(this).trigger('destroy.slickLightbox');
+        };
+    }(jQuery));
+</script>
+
+<script type="text/javascript">
+(function(){
+    try {
+        if (!jQuery) return;
+    } catch(err) {
+        return;
+    }
+
+    $(document).ready(function() {
+        var currentUrl = window.location.pathname;
+
+        // Set initial slider page
+        var initialSlide = 0;
+
+        if(window.Slideshow && typeof(window.Slideshow.current) !== 'undefined')
+            initialSlide = window.Slideshow.current;
+
+        // On book pages set the initial page based on the url
+        if (initialSlide == 0 && $(".slider-for").attr( "data-url" ) !== undefined) {
+            var bookUrl = '/' + $(".slider-for").attr("data-url");
+            if (currentUrl !== bookUrl) {
+                var page = parseInt(currentUrl.replace(bookUrl + '/', ''));
+                initialSlide = page - 1;
+            }
+        }
+
+		$('.slider-for').on('init', function(event, slick) {
+            $(".slider-for").tateResponsiveImage().tateLazyLoad();
+			$('.slick-current').tateLazyLoad({forceVisible: true, selector: '.slick-current'});
+        });
+        
+        // Init main image slider
+        $('.slider-for').slick({
+            arrows: false,
+            asNavFor: '.slider-nav',
+            fade: true,
+            infinite: false,
+            initialSlide: initialSlide,
+            lazyLoad: 'ondemand',
+            mobileFirst: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+        centerMode = true;
+        /*
+        // is the first slide or the last slide in the viewport? if so, center the carousel
+        if(typeof(window.Slideshow.page) !== "undefined" && window.Slideshow.page == 1)
+            centerMode = false;
+        */
+
+        // Init slider navigation
+        if ($('.slider-nav img').length) {
+            var l = $('.slider-nav img').length;
+
+            $('.slider-nav').css('max-width', '100%');
+
+            $('.slider-nav').slick({
+                arrows: false,
+                asNavFor: '.slider-for',
+                centerMode: centerMode,
+                focusOnSelect: true,
+                infinite: false,
+                initialSlide: initialSlide,
+                lazyLoad: 'ondemand',
+                slidesToScroll: 1,
+                variableWidth: true,
+            });
+
+            $('.carousel--left').on('click', function () {
+                $('.slider-nav').slick('slickPrev');
+            });
+            $('.carousel--right').on('click', function () {
+                $('.slider-nav').slick('slickNext');
+            });
+        }
+
+        // Set current page on book pages
+        if (initialSlide > 0) {
+            $('.slick-current-page').html(initialSlide + 1);
+        }
+
+        // Set current page number
+        $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            $('.slick-current-page').html(nextSlide + 1);
+
+            window.Slideshow.current = nextSlide;
+            var slide_pos = nextSlide;
+            var offset = window.Slideshow.slides[0].pos;
+            if(slide_pos > offset)
+                slide_pos -= offset;
+            var slide = window.Slideshow.slides[slide_pos];
+
+            if (typeof(slide) !== 'undefined') {
+                if (typeof(window.updateMetadata) === 'function')
+                    window.updateMetadata(slide);
+
+                if (typeof(slide.url) != 'undefined') {
+                    var url = window.location.protocol + "//" + window.location.host + slide.url;
+                    window.history.pushState('', '', url);
+                }
+            }
+            
+            var selector = "main_placeholder_" + nextSlide + " img";
+            $("#lightbox_" + selector).tateLazyLoad({forceVisible: true});
+            $("#" + selector).tateLazyLoad({forceVisible: true});
+
+            selector = "main_placeholder_" + nextSlide;
+            $("#lightbox_" + selector).parent().tateResponsiveImage({selector: "#lightbox_" + selector}).tateLazyLoad({forceVisible: true});
+
+            // sf-02 for some reasons the main page's carousel doesn't keep in sync with the lightbox'
+            $('.slideshow-thumbs .slider-nav').slick('slickGoTo', nextSlide);
+
+            // Update social sharing links
+            // @TODO add email
+            var currUrl = '%2F' + parseInt(currentSlide + 1);
+            var nextUrl = '%2F' + parseInt(nextSlide + 1);
+
+            var fb = $('.list__item--facebook > a').attr('href');
+            var tw = $('.list__item--twitter > a').attr('href');
+            var pn = $('.list__item--pinterest > a').attr('href');
+
+            if (currentSlide) {
+                fb = fb.replace(currUrl, nextUrl);
+                tw = tw.replace(currUrl, nextUrl);
+                pn = pn.replace(currUrl, nextUrl);
+            } else {
+                fb = fb + '%2F2';
+                tw = tw + '%2F2';
+                pn = pn + '%2F2';
+            }
+
+            $('.list__item--facebook > a').attr('href', fb);
+            $('.list__item--twitter > a').attr('href', tw);
+            $('.list__item--pinterest > a').attr('href', pn);
+        });
+
+        // On book pages update copyright, cc and licence on page change
+        $('.slider-for').on('afterChange', function(event, slick, currentSlide) {
+            if ($(".slider-for").attr( "data-url" ) !== undefined) {
+                var copyright = $(slick.$slides.get(currentSlide)).find('img').attr('data-copyright');
+                if(typeof copyright === 'undefined')
+                    copyright = '';
+                $('#master-image-copyright').text(copyright);
+
+                var cc = $(slick.$slides.get(currentSlide)).find('img').attr('data-cc');
+                $('#master-image-cc').text(cc);
+
+                var licence = $(slick.$slides.get(currentSlide)).find('img').attr('data-licence');
+                if (licence && licence != '') {
+                	licence = licence.replace(/( |\/)/g, '-');
+                }
+                $('#master-image-licence').attr('href', 'https://www.tate-images.com/results.asp?image=' + licence);
+            }
+        });
+
+        $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            loadPreviousPage(currentSlide);
+            loadNextPage(nextSlide);
+        });
+
+    });
+
+    setTimeout(function() {
+        // Open lightbox
+        $('.lightbox-open').slickLightbox({}).on({
+            'show.slickLightbox': function(){
+                $('.slick-current').tateLazyLoad({forceVisible: true});
+                $(".slider-nav li.responsive-container").tateResponsiveImage().tateLazyLoad();
+                $(".slick-lightbox-slick.slider-for").tateResponsiveImage().tateLazyLoad();
+            }
+        });
+    }, 500);
+
+})();
+</script>
+
+<!-- SLIDESHOW END -->
+
+        <script src="https://storage.googleapis.com/tate-digital/ui/vendor/jquery.colorbox.js"></script>
+        <script src="https://storage.googleapis.com/tate-digital/ui/2.13-compressed/static/js/vendor/tate-modals.js"></script>
+        
+
+
+  <div class="notification-container" id="notifications-footer"></div>
+</body>
+</html>
+
