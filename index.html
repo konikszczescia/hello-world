@@ -11,6 +11,33 @@
 <link rel="stylesheet" href="styles1.css">
   </head>
   <header>The art of kitsch</header>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="art.html">Kitschy works of art</a>
+  <a href="summer.html">Summer kitsch</a>
+  <a href="religious.html">Religious kitsch</a>
+</div>
+
+<span onclick="openNav()">MENU</span>
+<style>
+span {
+  font-family: #garamond;
+  color: #cc3399;
+  font-size: 30px;
+}
+</style>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<div id="main">
+</div>
   <div class="welcome">
     <p>Welcome to The Art of Kitsch, a website dedicated to one of the most
       ubiquitous art styles- kitsch or in other words a "particularly cheap, vulgar
@@ -37,6 +64,7 @@
                       <p class="subtitle">All you alaways wanted to see...</p>
                     </a>
                   </div>
+                </div>
 
 </body>
 </html>
